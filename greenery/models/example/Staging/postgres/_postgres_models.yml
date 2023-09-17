@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_postgres__users
+    description: base table from postgres  repersenting users in greenery platform
+    columns: 
+     - name: user_id
+       tests: 
+         - unique
+         - not_null
+  - name: stg_postgres__addresses
+  - name: stg_postgres__events
+  - name: stg_postgres__order_items
+  - name: stg_postgres__orders
+  - name: stg_postgres__products
+    descriptions: This is a dictionary of products
+  - name: stg_postgres__promos
+
