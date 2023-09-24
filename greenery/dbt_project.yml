@@ -34,4 +34,9 @@ models:
   greenery:
     # Config indicated by + and applies to all files under models/example/
     example:
+      staging:
       +materialized: view
+      intermediate:
+      +materialized: view
+      marts:
+      +materialized: table

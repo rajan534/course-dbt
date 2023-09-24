@@ -1,0 +1,1 @@
+select date_trunc('day',created_at) as day, * from {{ ref('stg_postgres__orders') }}

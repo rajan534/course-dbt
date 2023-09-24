@@ -10,8 +10,21 @@ models:
          - not_null
   - name: stg_postgres__addresses
   - name: stg_postgres__events
+    description: events data
+    columns:
+      - name: user_id 
+        tests:
+         - relationships:
+             to: ref('stg_postgres__users')
+             field: user_id  
+
   - name: stg_postgres__order_items
   - name: stg_postgres__orders
+    description: base table from postgres repersenting orders in greenery platform
+    columns: 
+     - name: created_at
+       tests: 
+         - not_null
   - name: stg_postgres__products
     descriptions: This is a dictionary of products
   - name: stg_postgres__promos
